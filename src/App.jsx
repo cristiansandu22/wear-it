@@ -29,18 +29,18 @@ const App = () => {
         <div className='categories-container'>
 
             {
-                categories.map(category => {
+                categories.map(({id, title}) => {
                     return(
-                        <div key={category.id} className='category-container'>
+                        <div key={id} className='category-container'>
                             <div className='category-body-container'>
-                                <h1>{category.title}</h1>
+                                <h1>{title}</h1>
                                 <p>Shop Now!</p>
                             </div>
                         </div>
                     )
                 })
             }
-            
+
         </div>
     )
 }
