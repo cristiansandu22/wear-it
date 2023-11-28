@@ -2,45 +2,47 @@ import './App.css'
 
 const App = () => {
 
-  return (
-    <div className='categories-container'>
-        <div className='category-container'>
-            <div className='category-body-container'>
-                <h1>Hats</h1>
-                <p>Shop Now!</p>
-            </div>
-        </div>
+    const categories = [
+        {
+            id: 1,
+            title: 'Hats'
+        },
+        {
+            id: 2,
+            title: 'Jackets'
+        },
+        {
+            id: 3,
+            title: 'Sneakers'
+        },
+        {
+            id: 4,
+            title: 'Women'
+        },
+        {
+            id: 5,
+            title: 'Mens'
+        },
+    ]
 
-        <div className='category-container'>
-            <div className='category-body-container'>
-                <h1>Jackets</h1>
-                <p>Shop Now!</p>
-            </div>
-        </div>
+    return (
+        <div className='categories-container'>
 
-        <div className='category-container'>
-            <div className='category-body-container'>
-                <h1>Sneakers</h1>
-                <p>Shop Now!</p>
-            </div>
+            {
+                categories.map(category => {
+                    return(
+                        <div key={category.id} className='category-container'>
+                            <div className='category-body-container'>
+                                <h1>{category.title}</h1>
+                                <p>Shop Now!</p>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+            
         </div>
-
-        <div className='category-container'>
-            <div className='category-body-container'>
-                <h1>Women</h1>
-                <p>Shop Now!</p>
-            </div>
-        </div>
-
-        <div className='category-container'>
-            <div className='category-body-container'>
-                <h1>Mens</h1>
-                <p>Shop Now!</p>
-            </div>
-        </div>
-
-    </div>
-  )
+    )
 }
 
 export default App
