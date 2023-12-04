@@ -28,10 +28,13 @@ const App = () => {
     return (
         <div className='categories-container'>
 
+            {/*TBD -> create components!!*/}
+
             {
                 categories.map(({id, title}) => {
                     return(
                         <div key={id} className='category-container'>
+                            <div className='background-image'/>
                             <div className='category-body-container'>
                                 <h1>{title}</h1>
                                 <p>Shop Now!</p>
