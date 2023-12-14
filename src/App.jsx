@@ -31,12 +31,12 @@ const App = () => {
             {/*TBD -> create components!!*/}
 
             {
-                categories.map(({id, title}) => {
+                categories.map((category) => {
                     return(
-                        <div key={id} className='category-container'>
+                        <div key={category.id} className='category-container'>
                             <div className='background-image'/>
                             <div className='category-body-container'>
-                                <h1>{title}</h1>
+                                <h1>{category.title}</h1>
                                 <p>Shop Now!</p>
                             </div>
                         </div>
