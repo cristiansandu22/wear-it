@@ -1,4 +1,4 @@
-import './App.css'
+import './categories.styles.scss'
 
 const App = () => {
 
@@ -36,8 +36,8 @@ const App = () => {
                         <div key={category.id} className='category-container'>
                             <div className='background-image'/>
                             <div className='category-body-container'>
-                                <h1>{category.title}</h1>
-                                <p>Shop Now!</p>
+                                <h2>{category.title}</h2>
+                                <p>Shop Now</p>
                             </div>
                         </div>
                     )
