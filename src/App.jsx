@@ -1,4 +1,5 @@
 import './categories.styles.scss'
+import CategoryContainer from "./components/category-container/category-container.component.jsx";
 
 const App = () => {
 
@@ -34,20 +35,10 @@ const App = () => {
     return (
         <div className='categories-container'>
 
-            {/*TBD -> create components!!*/}
-
             {
                 categories.map((category) => {
                     return(
-                        <div key={category.id} className='category-container'>
-                            <div className='background-image' style={{
-                                backgroundImage: `url(${category.imageUrl})`
-                            }}/>
-                            <div className='category-body-container'>
-                                <h2>{category.title}</h2>
-                                <p>Shop Now</p>
-                            </div>
-                        </div>
+                        <CategoryContainer key={category.id} category={category} />
                     )
                 })
             }
