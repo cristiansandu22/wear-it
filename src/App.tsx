@@ -1,5 +1,11 @@
-import './categories.styles.scss'
-import Categories from "./components/categories/categories.component.jsx";
+import './categories.styles.scss';
+import Categories from "./components/categories/categories.component.tsx";
+
+export type Category = {
+    id: number;
+    title: string;
+    imageUrl: string
+}
 
 const App = () => {
 

@@ -1,8 +1,12 @@
 import './categories.styles.scss'
-import CategoryContainer from "../category-container/category-container.component.jsx";
-import PropTypes from "prop-types";
+import CategoryContainer from "../category-container/category-container.component.tsx";
+import {Category} from "../../App.tsx";
 
-const Categories = ({categories}) => {
+type CategoriesProps = {
+    categories: Category[]
+}
+
+const Categories = ({categories}: CategoriesProps) => {
 
     return(
         <div className='categories-container'>
@@ -19,8 +23,5 @@ const Categories = ({categories}) => {
     )
 }
 
-Categories.propTypes = {
-    categories: PropTypes.array.isRequired
-}
 
 export default Categories;

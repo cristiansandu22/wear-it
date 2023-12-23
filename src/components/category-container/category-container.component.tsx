@@ -1,7 +1,12 @@
 import './category-container.styles.scss'
 import PropTypes from 'prop-types';
+import {Category} from "../../App.tsx";
 
-const CategoryContainer = ({category}) => {
+type CategoryContainerProps = {
+    category: Category
+}
+
+const CategoryContainer = ({category}: CategoryContainerProps) => {
     return(
         <div className='category-container'>
             <div className='background-image' style={{
